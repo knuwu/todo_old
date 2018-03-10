@@ -10,4 +10,4 @@ CREATE TABLE todo (
 );
 
 INSERT INTO todo (added_at, title, details)
-    VALUES (CURRENT_TIMESTAMP, 'Test', 'Dies ist ein Testeintrag');
+    VALUES (CURRENT_TIMESTAMP, 'Test', 'Dies ist ein Testeintrag!');
