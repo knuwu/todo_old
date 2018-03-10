@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class TodoServiceImpl implements TodoService {
@@ -21,8 +22,8 @@ public class TodoServiceImpl implements TodoService {
   }
 
   @Override
-  public Todo getTodo(Long id) {
-    return repository.findOne(id);
+  public Optional<Todo> getTodo(Long id) {
+    return repository.findById(id);
   }
 
   @Override
@@ -36,7 +37,7 @@ public class TodoServiceImpl implements TodoService {
 
   @Override
   public void deleteTodo(Long id) {
-    repository.delete(id);
+    repository.deleteById(id);
   }
 
 

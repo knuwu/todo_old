@@ -3,6 +3,7 @@ package ch.inetware.openshift.services;
 import ch.inetware.openshift.domain.Todo;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface TodoService {
 
@@ -18,7 +19,7 @@ public interface TodoService {
    * @param id Id des Todo-Eintrags
    * @return der gesuchte Todo-Eintrag
    */
-   Todo getTodo(Long id);
+   Optional<Todo> getTodo(Long id);
 
   /**
    * Speichert einen neuen Todo-Eintrag in der Liste

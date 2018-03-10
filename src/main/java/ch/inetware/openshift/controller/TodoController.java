@@ -36,7 +36,7 @@ public class TodoController {
   @RequestMapping(path = "/todo/{id}", method = GET)
   public Todo getTodoById(@PathVariable Long id) {
     LOG.info("/todo/{} called", id);
-    return todoService.getTodo(id);
+    return todoService.getTodo(id).get();
   }
 
   @ApiOperation(value = "Neuen Eintrag in Todo-Liste hinzufügen")
